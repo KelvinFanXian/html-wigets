@@ -1,0 +1,46 @@
+{
+  "agreement":[
+    {
+      "id": "asdfasf",
+      "clucliname": "线索一",
+      "responser": "张三",
+      "agreeId": 2345,
+      "agreeStat": "待审核",
+      "effectDate": 20170417,
+      "endDate": 20170917,
+      "agreeType": "普通采购",
+      "saleSupervisor": "销售主管0",
+      "saleFollow": "销售跟进人0",
+      "saleAttach": 12345677654134332,
+      "createdBy": "admin",
+      "createdDate": 2345,
+      "modifiedBy": "admin",
+      "modifiedDate": 2345,
+      "isEnable": 1
+    },
+    {
+      "id": "abbdfasf",
+      "clucliname": "客户一",
+      "responser": "李四",
+      "agreeId": 2346,
+      "agreeStat": "待审核",
+      "effectDate": 20170417,
+      "endDate": 20170917,
+      "agreeType": "普通采购",
+      "saleSupervisor": "销售主管1",
+      "saleFollow": "销售跟进人1",
+      "saleAttach": 12345677654134332,
+      "createdBy": "admin",
+      "createdDate": 2345,
+      "modifiedBy": "admin",
+      "modifiedDate": 2345,
+      "isEnable": 1
+    }
+  ],
+
+  "customer_type":{
+    "clu":"线索",
+    "cli":"客户"
+  }
+
+}

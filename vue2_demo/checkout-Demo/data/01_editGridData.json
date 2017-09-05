@@ -1,0 +1,20 @@
+{
+  "paratype":[
+  {"id":"gSf2th0ZR63ud31iU6F","paraTypeCd":"CARD_TYPE","paraTypeNm":"会员卡类型","description":"会员卡类型，如：英语学习卡、酒店技能培训卡"},
+  {"id":"9wutqNWJ4OpoPDQtSyS","paraTypeCd":"ADDCREDITTYPE","paraTypeNm":"储值类型","description":"预付、后付、配额储值"},
+  {"id":"NrhbMW6l7ksF5dMCOGI","paraTypeCd":"CURRENCY","paraTypeNm":"货币","description":"人民币、美元、新加坡元、日元、泰铢"}
+  ],
+  "paraitem":[
+    {"id":"2QGQsuvZ0MJa50CHR7z","paraTypeId":"9wutqNWJ4OpoPDQtSyS","paraItemCd":"ZSCZ","paraItemNm":"赠送储值","description":""},
+    {"id":"1THlkElK8EJf7xon7sQ","paraTypeId":"9wutqNWJ4OpoPDQtSyS","paraItemCd":"YFCZ","paraItemNm":"预付储值","description":""},
+    {"id":"8vwl3RqbOAMl7Du74Z7","paraTypeId":"NrhbMW6l7ksF5dMCOGI","paraItemCd":"THB","paraItemNm":"泰铢","description":"泰铢"},
+    {"id":"vZTyd1VArChX6zUx4s2","paraTypeId":"NrhbMW6l7ksF5dMCOGI","paraItemCd":"JPY","paraItemNm":"日元","description":"日元"},
+    {"id":"5f6h6k3wTKMUqewoFsO","paraTypeId":"NrhbMW6l7ksF5dMCOGI","paraItemCd":"SGD","paraItemNm":"新加坡元","description":"新加坡元"},
+    {"id":"bCW4UMRpFYdnUT0bVxw","paraTypeId":"9wutqNWJ4OpoPDQtSyS","paraItemCd":"HFCZ","paraItemNm":"后付储值","description":""},
+    {"id":"ZR03p3JXEzo8eyPQgcB","paraTypeId":"NrhbMW6l7ksF5dMCOGI","paraItemCd":"USD","paraItemNm":"美元","description":"美元"},
+    {"id":"5LFHCLhGSzQfkc3BE6P","paraTypeId":"NrhbMW6l7ksF5dMCOGI","paraItemCd":"CNY","paraItemNm":"人民币","description":"人民币"},
+    {"id":"3OeB4k2BlhxbzgOInrG","paraTypeId":"gSf2th0ZR63ud31iU6F","paraItemCd":"YYXXK","paraItemNm":"英语学习卡","description":"英语学习卡"},
+    {"id":"Ncwpn5pivDvRSEsvHup","paraTypeId":"gSf2th0ZR63ud31iU6F","paraItemCd":"JDJNPXK","paraItemNm":"酒店技能培训卡","description":"酒店技能培训卡"},
+    {"id":"BptG2X4LQi79lMHwqpF","paraTypeId":"gSf2th0ZR63ud31iU6F","paraItemCd":"YEYY","paraItemNm":"幼儿英语","description":""}
+  ]
+}

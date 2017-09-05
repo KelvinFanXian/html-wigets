@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>协议管理</title>
+    <link href="css/base2.css" rel="stylesheet" >
+    <link href="css/qoocoCRM.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+</head>
+<body class="checkout">
+<div id="app">
+
+    <el-card>
+        <el-form id="queryform" :inline="true" :model="queryCond" ref="queryCond" class="demo-form-inline query-form-md-height query-form-lg-height">
+            <el-form-item prop="clucliname">
+                <el-input v-model="queryCond.clucliname" class="middle-width-input" placeholder="线索/客户名称"></el-input>
+            </el-form-item>
+            <el-form-item prop="agreeType">
+                <el-select v-model="queryCond.agreeType" class="short-width-input" clearable filterable placeholder="合作类型">
+                    <el-option
+                            v-for="item in agreeTypeList"
+                            :label="item.paraItemNm"
+                            :value="item.paraItemCd">
+                    </el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item prop="agreeStat">
+                <el-select v-model="queryCond.agreeStat" class="short-width-input" clearable filterable placeholder="协议状态">
+                    <el-option
+                            v-for="item in agreeStatList"
+                            :label="item.paraItemNm"
+                            :value="item.paraItemCd">
+                    </el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item prop="saleSupervisor">
+                <el-input v-model="queryCond.saleSupervisor" class="middle-width-input" placeholder="销售主管"></el-input>
+            </el-form-item>
+            <el-form-item prop="saleFollow">
+                <el-input v-model="queryCond.saleFollow" class="middle-width-input" placeholder="销售跟进人"></el-input>
+            </el-form-item>
+            <el-form-item prop="dateRange">
+                <el-date-picker v-model="queryCond.dateRange" type="daterange" placeholder="起止日期"></el-date-picker>
+            </el-form-item>
+            <el-button type="primary" icon="search" @click="queryAgree">查询</el-button>
+        </el-form>
+    </el-card>
+
+    <div class="box">
+    <div class="box-header">
+        <el-button type="primary" icon="plus" @click="addAgreement">新增协议</el-button>
+    </div>
+    <div class="box-body">
+        <el-row>
+            <el-col :span="24">
+            <el-table :data="agreement" border>
+                <el-table-column property="clucliname" label="线索/客户名称"></el-table-column>
+                <el-table-column property="responser" label="负责人"></el-table-column>
+                <el-table-column property="agreeId" label="协议ID"></el-table-column>
+                <el-table-column property="agreeStat" label="协议状态"></el-table-column>
+                <el-table-column property="effectDate" label="协议生效日期"></el-table-column>
+                <el-table-column property="endDate" label="协议终止日期"></el-table-column>
+                <el-table-column property="agreeType" label="合作类型"></el-table-column>
+                <el-table-column property="saleSupervisor" label="销售主管"></el-table-column>
+                <el-table-column property="saleFollow" label="销售跟进人"></el-table-column>
+                <el-table-column property="saleAttach" label="协议附件"></el-table-column>
+                <el-table-column  label="操作" width="120px" class-name="option" fixed="right">
+                    <template scope="scope">
+                    <el-row :gutter="4">
+                        <el-col :span="12">
+                        <el-tooltip content="编辑" placement="left">
+                            <el-button size="small" type="primary" icon="edit" @click="saveType(scope.$index, scope.row)"></el-button>
+                        </el-tooltip>
+                        </el-col>
+                        <el-col :span="12">
+                        <el-tooltip content="删除" placement="right">
+                            <el-button size="small" type="danger" icon="delete" @click="delType(scope.$index, scope.row)"></el-button>
+                        </el-tooltip></el-col>
+                    </el-row>
+                    </template>
+                </el-table-column>
+            </el-table>
+            </el-col>
+        </el-row>
+    </div>
+    </div>
+</div>
+
+    <script src="js/myLib/vue.js"></script>
+    <script src="js/myLib/element.js"></script>
+    <script src="js/myLib/polyfill.js"></script>
+    <script src="js/lib/axios.min.js"></script>
+    <script src="js/agreement.js"></script>
+</body>
+</html>

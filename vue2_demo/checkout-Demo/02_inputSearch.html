@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>inputSearch</title>
+    <link href="css/base2.css" rel="stylesheet" >
+    <link href="css/qoocoCRM.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+</head>
+<body class="checkout">
+<div id="app">
+<div class="box">
+<div class="box-body">
+    <el-row class="demo-autocomplete">
+        <el-col :span="24">
+            <div class="sub-title">输入后匹配输入建议</div>
+            <el-autocomplete
+                    class="inline-input"
+                    v-model="state2"
+                    :fetch-suggestions="querySearch"
+                    placeholder="请输入内容"
+                    :trigger-on-focus="false"
+                    @select="handleSelect"
+            ></el-autocomplete>
+        </el-col>
+    </el-row>
+</div>
+</div>
+</div>
+
+    <script src="js/myLib/vue.js"></script>
+    <script src="js/myLib/element.js"></script>
+    <script src="js/myLib/polyfill.js"></script>
+    <script src="js/lib/axios.min.js"></script>
+    <script src="js/02_inputSearch.js"></script>
+</body>
+</html>
